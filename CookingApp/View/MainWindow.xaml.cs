@@ -23,6 +23,7 @@ namespace CookingApp
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Source = new Uri("MainPages/LoginPage.xaml", UriKind.Relative);
         }
     }
 }

@@ -49,21 +49,32 @@
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Background" Value="#424242"/>
         <Setter Property="Foreground" Value="#9671ce"/>
+        <Setter Property="FontSize" Value="18"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border Background="{TemplateBinding Background}" BorderBrush="#363636" BorderThickness="2">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="#363636"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#363636"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#363636"/>
+                            <Setter Property="Cursor" Value="IBeam"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#363636" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsFocused" Value="True">
-                <Setter Property="Background" Value="#363636"/>
-            </Trigger>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Cursor" Value="IBeam"/>
-            </Trigger>
-        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DefaultTextBoxPlaceHolder" TargetType="TextBox" BasedOn="{StaticResource DefaultTextBox}">
+        <Setter Property="BorderBrush" Value="#424242"/>
     </Style>
 </ResourceDictionary>

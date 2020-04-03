@@ -6,6 +6,6 @@
         mc:Ignorable="d"
         Title="MainWindow" MinHeight ="350" MinWidth="500" Height="350" Width="500">
     <Grid>
-        <Frame x:Name="MainFrame" Source="MainPages/LoginPage.xaml"/>
+        <Frame x:Name="MainFrame"/>
     </Grid>
 </Window>

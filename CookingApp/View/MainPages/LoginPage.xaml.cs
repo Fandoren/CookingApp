@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,6 +22,12 @@ namespace CookingApp.View.MainPages
         public LoginPage()
         {
             InitializeComponent();
+            
+        }
+
+        private void Login_Sign_Up_Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
