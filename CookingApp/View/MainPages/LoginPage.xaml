@@ -1,0 +1,24 @@
+﻿<Page x:Class="CookingApp.View.MainPages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CookingApp.View.MainPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="500"
+      Title="LoginPage">
+
+    <Grid Style="{StaticResource DefaultGrid}">
+        <StackPanel>
+            <Label Content="Login" Style="{StaticResource DefaultBigLabel}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,10"/>
+            <Label Content="Login" Style="{StaticResource DefaultLabel}" HorizontalAlignment="Center" Margin="0,10"/>
+            <TextBox Style="{StaticResource DefaultTextBox}" Width="200" Height="30"/>
+            <Label Content="Password" Style="{StaticResource DefaultLabel}" HorizontalAlignment="Center" Margin="0, 10"/>
+            <TextBox Style="{StaticResource DefaultTextBox}" Width="200" Height="30"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+                <Button Content="Login" Style="{StaticResource DefaultButton}" Width="90" Height="40" Margin="0,0,10,0"/>
+                <Button Content="Sign Up" Style="{StaticResource DefaultButton}" Width="90" Height="40" Margin="10,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
