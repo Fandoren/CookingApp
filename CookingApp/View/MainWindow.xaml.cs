@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CookingApp.ViewModel;
 
 namespace CookingApp
 {
@@ -23,7 +24,7 @@ namespace CookingApp
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Source = new Uri("MainPages/LoginPage.xaml", UriKind.Relative);
+
         }
     }
 }
